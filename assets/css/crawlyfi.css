@@ -1,0 +1,32 @@
+div#login-dialog .uk-panel-box-header{
+    margin: 0px 0px 0px 0px;
+}
+
+div#login-dialog div.uk-panel-box-header h2.uk-text-bold{
+    display: none;
+}
+
+div#login-dialog .uk-panel-box-header {
+    background-color: #FFFFFF;
+    border-bottom: none;
+}
+
+.uk-bg-transparent-pattern{
+    background-image: none;
+}
+
+.app-name {
+    display: none;
+}
+
+cp-field[type="gallery"] div[ref="imagescontainer"]{
+    height: 233px;
+    padding-right: 10px;
+    overflow: auto;
+}
+
+cp-fieldcontainer {
+    padding-left: 15px;
+    border-left: 0px rgba(0,0,0,0.1) solid;
+    transition: border-color 200ms;
+}
