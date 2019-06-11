@@ -30,3 +30,41 @@ cp-fieldcontainer {
     border-left: 0px rgba(0,0,0,0.1) solid;
     transition: border-color 200ms;
 }
+
+
+/* FORCE FULL TITLE 
+https://github.com/serjoscha87/cockpit_FORCE-FULL-TITLE/blob/master/FullTitle/assets/css/full_title.css
+*/
+
+entries-tree-item .uk-dropdown.uk-dropdown-scrollable {
+    display: block;
+    position: static;
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+entries-tree-item .uk-dropdown.uk-dropdown-scrollable > div {
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 0 !important;
+    pointer-events: none;
+}
+entries-tree-item .uk-dropdown.uk-dropdown-scrollable > div:nth-child(odd) {
+    background-color: #eaeaea;
+    padding: 0 5px;
+}
+
+entries-tree-item .uk-dropdown.uk-dropdown-scrollable > div > span {
+    display: none !important;
+}
+
+entries-tree-item .uk-dropdown.uk-dropdown-scrollable > div > a {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+entries-tree-item .extrafields-indicator {
+    display: none !important;
+}
