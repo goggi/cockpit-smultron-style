@@ -1,4 +1,7 @@
 <?php
+
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
 if (COCKPIT_ADMIN && !COCKPIT_API_REQUEST) {
 
     $settings = $app->config['crawlyfi'] ?? [];
