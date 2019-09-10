@@ -4,6 +4,9 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 if (COCKPIT_ADMIN && !COCKPIT_API_REQUEST) {
 
+    include_once(__DIR__ . '/collection.php');
+
+
     $settings = $app->config['crawlyfi'] ?? [];
     extract($settings);
 
@@ -21,7 +24,7 @@ if (COCKPIT_ADMIN && !COCKPIT_API_REQUEST) {
         extract($settings);
 
         $this->helper('admin')->addAssets('cockpit-smultron-style:assets/css/crawlyfi.css');
-        $this->helper('admin')->addAssets('cockpit-smultron-style:assets/js/app.utils.js');
+        //$this->helper('admin')->addAssets('cockpit-smultron-style:assets/js/app.utils.js');
 
 
         // Load environment specific css.
