@@ -8,7 +8,11 @@ $app->on('collections.save.before', function($collectionName, &$entry, $isUpdate
 
     foreach ($collection['fields'] as $field){
         if($field['type'] == 'repeater' && $entry[$field['name']] == '') {                                    
-            $entry[$field['name']] = null;            
+            if(array_key_exists($field['name'],$entry)) {
+                if($entry[$field['name']] == ""){
+                    $entry[$field['name']] = null;  
+                }
+            }                          
         }
     }
 });
