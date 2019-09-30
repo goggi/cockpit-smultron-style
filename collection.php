@@ -20,6 +20,13 @@ $app->on('collections.save.before', function($collectionName, &$entry, $isUpdate
                     $entry[$field['name']] = null;  
                 }
             }                          
-        }        
+        }
+        if($field['type'] == 'collectionlink' && $entry[$field['name']] == '') {                                    
+            if(array_key_exists($field['name'],$entry)) {
+                if($entry[$field['name']] == ""){
+                    $entry[$field['name']] = null;  
+                }
+            }                          
+        }                 
     }
 });
