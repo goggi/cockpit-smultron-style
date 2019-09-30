@@ -14,5 +14,12 @@ $app->on('collections.save.before', function($collectionName, &$entry, $isUpdate
                 }
             }                          
         }
+        if($field['type'] == 'gallery' && $entry[$field['name']] == '') {                                    
+            if(array_key_exists($field['name'],$entry)) {
+                if($entry[$field['name']] == ""){
+                    $entry[$field['name']] = null;  
+                }
+            }                          
+        }        
     }
 });
